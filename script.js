@@ -7,7 +7,9 @@ themeToggle.onclick = () => document.body.classList.toggle("light");
 
 document.querySelectorAll(".cate").forEach((cat) => {
   cat.onclick = () => {
-    document.querySelectorAll(".cate").forEach((c) => c.classList.remove("active"));
+    document
+      .querySelectorAll(".cate")
+      .forEach((c) => c.classList.remove("active"));
     cat.classList.add("active");
     filterCars();
   };
@@ -21,7 +23,10 @@ function filterCars() {
     const type = car.querySelector(".type").textContent.toLowerCase();
     car.classList.toggle(
       "hidden",
-      !((title.includes(q) || type.includes(q)) && (cat === "all" || car.dataset.cat === cat))
+      !(
+        (title.includes(q) || type.includes(q)) &&
+        (cat === "all" || car.dataset.cat === cat)
+      )
     );
   });
 }
@@ -29,7 +34,12 @@ function filterCars() {
 document.getElementById("searchInput").oninput = filterCars;
 
 function showAllCars() {
-  document.querySelectorAll(".cate").forEach((c) => c.classList.remove("active"));
+  document
+    .querySelectorAll(".cate")
+    .forEach((c) => c.classList.remove("active"));
+  document.querySelector('.cate[data-cat="all"]')?.classList.add("active");
   document.getElementById("searchInput").value = "";
-  document.querySelectorAll(".car-card").forEach((c) => c.classList.remove("hidden"));
+  document
+    .querySelectorAll(".car-card")
+    .forEach((c) => c.classList.remove("hidden"));
 }
