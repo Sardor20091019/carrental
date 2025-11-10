@@ -8,7 +8,9 @@
   </head>
   <body>
     <header>
-      <div class="logo" onclick="scrollToSection('hero')"> <img src="./Logo.png" alt=""></div>
+      <div class="logo" onclick="scrollToSection('hero')">
+        <img src="./Logo.png" alt="">
+      </div>
       <nav>
         <a onclick="scrollToSection('categories')">Categories</a>
         <a onclick="scrollToSection('about')">About Us</a>
@@ -27,12 +29,10 @@
         Rent cars as you are comfortable and where you are comfortable.
       </p>
       <div class="search-bar">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Find the car of your dreams"
-        />
-        <button onclick="filterCars()"><img src="./search.png" alt="Search" /></button>
+        <input type="text" id="searchInput" placeholder="Find the car of your dreams" />
+        <button onclick="filterCars()">
+          <img src="./Search.png" alt="Search" />
+        </button>
       </div>
     </section>
 
@@ -40,6 +40,8 @@
       <div class="cate active" data-cat="compact">Compact</div>
       <div class="cate" data-cat="sports">Sports Cars</div>
       <div class="cate" data-cat="vans">Van</div>
+      <!-- hidden all category for JS -->
+      <div class="cate" data-cat="all" style="display:none;"></div>
     </div>
 
     <section class="cars-section">
@@ -54,9 +56,7 @@
           <div class="car-info">
             <h3>Ford Fiesta</h3>
             <div class="type">Economy Car</div>
-            <div class="specs">
-              <p>5 Seats • 21+ years • Automatic • 15 km/lit</p>
-            </div>
+            <div class="specs"><p>5 Seats • 21+ years • Automatic • 15 km/lit</p></div>
           </div>
         </div>
 
@@ -65,9 +65,7 @@
           <div class="car-info">
             <h3>Nissan Versa</h3>
             <div class="type">Compact Car</div>
-            <div class="specs">
-              <p>5 Seats • 21+ years • Automatic • 14 km/lit</p>
-            </div>
+            <div class="specs"><p>5 Seats • 21+ years • Automatic • 14 km/lit</p></div>
           </div>
         </div>
 
@@ -76,20 +74,16 @@
           <div class="car-info">
             <h3>Toyota Corolla</h3>
             <div class="type">Mid-size Car</div>
-            <div class="specs">
-              <p>5 Seats • 21+ years • Automatic • 13 km/lit</p>
-            </div>
+            <div class="specs"><p>5 Seats • 21+ years • Automatic • 13 km/lit</p></div>
           </div>
         </div>
 
         <div class="car-card" data-cat="sports">
           <img src="./Chevy_traverse.png" alt="Chevy Traverse" />
           <div class="car-info">
-            <h3>Chevy Traverse </h3>
+            <h3>Chevy Traverse</h3>
             <div class="type">Sports Car</div>
-            <div class="specs">
-              <p>4 Seats • 25+ years • Manual • 8 km/lit</p>
-            </div>
+            <div class="specs"><p>4 Seats • 25+ years • Manual • 8 km/lit</p></div>
           </div>
         </div>
 
@@ -98,9 +92,7 @@
           <div class="car-info">
             <h3>Ford Mustang</h3>
             <div class="type">Sports Car</div>
-            <div class="specs">
-              <p>4 Seats • 25+ years • Manual • 9 km/lit</p>
-            </div>
+            <div class="specs"><p>4 Seats • 25+ years • Manual • 9 km/lit</p></div>
           </div>
         </div>
 
@@ -109,9 +101,7 @@
           <div class="car-info">
             <h3>Nissan Rogue</h3>
             <div class="type">Van</div>
-            <div class="specs">
-              <p>7 Seats • 25+ years • Automatic • 10 km/lit</p>
-            </div>
+            <div class="specs"><p>7 Seats • 25+ years • Automatic • 10 km/lit</p></div>
           </div>
         </div>
 
@@ -120,9 +110,7 @@
           <div class="car-info">
             <h3>Jaguar F-Type</h3>
             <div class="type">Sports Car</div>
-            <div class="specs">
-              <p>2 Seats • 30+ years • Manual • 12 km/lit</p>
-            </div>
+            <div class="specs"><p>2 Seats • 30+ years • Manual • 12 km/lit</p></div>
           </div>
         </div>
 
@@ -131,16 +119,14 @@
           <div class="car-info">
             <h3>Ferrari SF90</h3>
             <div class="type">Sports Car</div>
-            <div class="specs">
-              <p>2 Seats • 30+ years • Manual • 12 km/lit</p>
-            </div>
+            <div class="specs"><p>2 Seats • 30+ years • Manual • 12 km/lit</p></div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <button style="text-align: center; display: block; margin: 1rem auto;" class="btn" onclick="showAllCars()">View all cars</button>
+    <button class="btn" style="text-align:center; display:block; margin:1rem auto;" onclick="showAllCars()">View all cars</button>
 
     <section style="text-align: center; padding-top: 30px;" id="about">
       <h2>About Us</h2>
@@ -151,12 +137,9 @@
 
     <section style="text-align: center; padding-top: 30px;" id="help">
       <h2>Help Center</h2>
-      <p>
-        Need help? Call us at +1 855 420 0000 or email carrental@gmail.com
-      </p>
+      <p>Need help? Call us at +1 855 420 0000 or email carrental@gmail.com</p>
     </section>
 
     <script src="./script.js"></script>
   </body>
 </html>
-
